@@ -37,7 +37,6 @@ import { ProductDetailGuard } from './products/product-detail.guard';
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ])
   ],
-  // providers: [ProductDetailGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

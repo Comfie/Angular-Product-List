@@ -9,8 +9,8 @@ import { ProductService } from './product.service';
 })
 
 export class ProductListComponent implements OnInit{
-  pageTitle: string = 'Product List';
-  imageWidth: number = 60;
+  pageTitle = 'Product List';
+  imageWidth = 60;
   imageMargin: number = 2;
   showImage: boolean = false;
   errorMessage: string;
@@ -50,7 +50,10 @@ export class ProductListComponent implements OnInit{
         this.products = products;
         this.filteredProducts = this.products;
       },
-      error: err => this.errorMessage = err
+      error: err => {
+        this.errorMessage = err;
+        console.log("Error", err);
+      }
     });
 
   }

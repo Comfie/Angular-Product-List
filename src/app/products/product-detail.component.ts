@@ -20,9 +20,9 @@ export class ProductDetailComponent implements OnInit {
               private productService: ProductService) { }
 
   ngOnInit() {
-    const param = this.route.snapshot.paramMap.get('id');
+    let param = +this.route.snapshot.paramMap.get('id');
     if (param) {
-      const id = +param;
+      let id = +param;
       this.getProduct(id);
     }
   }
